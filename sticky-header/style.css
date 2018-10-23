@@ -1,0 +1,56 @@
+/* Global Styles */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body {    
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #ABA9BF;
+}
+
+h1, h2, h3 {
+    margin-top: 0px;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    transition: padding 300ms ease;
+}
+
+header.sticky {
+    padding: 10px 20px;
+}
+    
+a.nav__link {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #000000;
+    text-decoration: underline;
+}
+
+a.nav__link:last-child {
+    margin-right: 0;
+}
+
+section.content {
+    margin-top: 80px;
+    padding: 20px;
+    background-color: #ABA9BF;
+    color: #202020;
+}

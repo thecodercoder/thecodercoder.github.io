@@ -10,52 +10,36 @@ html {
 body {
   height: 100%;
   min-height: 100vh;
-  margin: 0;
-  padding: 20px 20px;
-  line-height: 1.2;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  text-align: center;
-  color: #ffffff;
+  padding: 15px 0;
   background-color: #060042;
-  background-image: linear-gradient(#060042 5%, #20A39E 90%);
+  background-image: linear-gradient(#060042 2%, #20A39E 108%);
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  text-align: center;
 }
 
-h1 {
-  font-size: 3rem;
-  color: #ffffff;
+img.logo {
+  width: 130px;
 }
 
 h2 {
-  font-size: 1.2rem;
-  font-weight: 400;
-  letter-spacing: 3px;
+  font-size: 1rem;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  margin: 2.5rem 0 1.25rem;
+  margin-top: 25px;
 }
 
 a {
-  display: inline-block;
-  color: #ffffff;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-a.link {
   display: block;
-  max-width: 400px;
-  margin: 0 auto 10px auto;
-  padding: 1rem;
+  font-size: 1.1rem;
+  color: #ffffff;
+  text-decoration: none;
   border: 2px solid #ffffff;
-  background-color: #060042;
-  font-size: 1rem;
-  line-height: 1.4rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: all 250ms ease-in-out;
+  margin: 10px auto;
+  padding: 15px;
+  max-width: 320px;
+  transition: all 200ms ease-in-out;
 }
-a.link.popular {
+a:hover, a:focus {
   background-color: #060042;
-}
-a.link:hover, a.link:focus {
-  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.5);
 }

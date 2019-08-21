@@ -18,7 +18,7 @@
 
     </head>
     <body>
-        <link rel="stylesheet" href="dist/style.css"> 
+        <link rel="stylesheet" href="css/style.css"> 
 
         <!-- Logo -->
         <img class="logo" src="img/logo.png" />
@@ -26,16 +26,13 @@
         <!-- Featured -->
         <h2>Featured</h2>
         <div class="section">
-            
+
+            <a class="featured" href="https://coder-coder.com/beginners-roadmap-web-development/"
+                onclick="gtag('event', 'link-click', { 'event_category' : 'links', 'event_label' : 'beginners-roadmap' });">Beginner's roadmap to web development</a>
+
             <a class="featured" href="https://dev.to/thecodercoder/how-to-grow-your-instagram-following-organically-4gbe"
                 onclick="gtag('event', 'featured-click', { 'event_category' : 'links', 'event_label' : 'grow-on-instagram' });">
                 How to grow your Instagram following organically
-                <!--<span></span>-->
-            </a>
-
-            <a class="featured" href="https://coder-coder.com/z-index-isnt-working/"
-                onclick="gtag('event', 'featured-click', { 'event_category' : 'links', 'event_label' : 'z-index' });">
-                4 Reasons your z-index isn't working
                 <!--<span></span>-->
             </a>
 
@@ -48,13 +45,11 @@
         <h2>Popular Content</h2>
 
         <div class="section">
-            <a href="https://www.amazon.com/shop/thecodercoder"
-                onclick="gtag('event', 'link-click', { 'event_category' : 'links', 'event_label' : 'amazon-shop' });">Check out all my gear on my Amazon Shop!</a>
-            <a href="https://coder-coder.com/learn-web-development"
-                onclick="gtag('event', 'link-click', { 'event_category' : 'links', 'event_label' : 'absolute-beginners' });">The Absolute Beginner's Guide to Web Development</a>
-            <a href="https://coder-coder.com/best-web-development-books/"
+            <a class="featured" href="https://www.amazon.com/shop/thecodercoder"
+                onclick="gtag('event', 'link-click', { 'event_category' : 'links', 'event_label' : 'amazon-shop' });">Check out all my gear on my Amazon Shop!</a>            
+            <a class="featured" href="https://coder-coder.com/best-web-development-books/"
                 onclick="gtag('event', 'link-click', { 'event_category' : 'links', 'event_label' : 'best-books' });">Coding Book Recommendations</a>
-            <a href="https://coder-coder.com/best-web-development-courses/"
+            <a class="featured" href="https://coder-coder.com/best-web-development-courses/"
                 onclick="gtag('event', 'link-click', { 'event_category' : 'links', 'event_label' : 'best-courses' });">Best Courses for Web Dev</a>
         </div>
 
@@ -63,6 +58,8 @@
         <div class="channels">
             <a href="https://coder-coder.com/"
                 onclick="gtag('event', 'channels-click', { 'event_category' : 'links', 'event_label' : 'blog' });">Blog</a>
+            <a href="https://www.twitter.com/thecodercoder"
+                onclick="gtag('event', 'channels-click', { 'event_category' : 'links', 'event_label' : 'twitter' });">Twitter</a>
             <a href="https://www.youtube.com/c/CoderCoderTV"
                 onclick="gtag('event', 'channels-click', { 'event_category' : 'links', 'event_label' : 'youtube' });">YouTube</a>            
         </div>

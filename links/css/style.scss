@@ -1,3 +1,5 @@
+$dkPurpleBlue: #060042;
+
 html {
     box-sizing: border-box;
     font-size: 100%;
@@ -8,7 +10,7 @@ html {
 }
 
 body {
-    background-color: #060042;
+    background-color: $dkPurpleBlue;
     background-image: url('../img/hp-background.png');
     background-size: 400px;
     background-repeat: repeat;
@@ -27,7 +29,7 @@ body {
 
 a, a.featured {    
     &:hover {
-        background-color: #060042;
+        background-color: $dkPurpleBlue;
         color: #ffffff;
     }
 }
@@ -38,16 +40,20 @@ a {
     margin: 0 auto 15px auto;
     padding: 15px 20px;
     font-size: 0.95rem;
+    background-color: $dkPurpleBlue;
     color: #ffffff;
     border: 2px solid #ffffff;
-    border-radius: 13px;
+    border-radius: 26px;
     text-decoration: none;
-    transition: all 200ms ease-in-out;
+    transition: all 150ms ease-in-out;
     
+    &:hover {
+        background-color: rgba(#ffffff, 0.05);
+    }
     &.featured {
         position: relative;
         background-color: #ffffff;
-        color: #060042;
+        color: $dkPurpleBlue;
         font-weight: bold;
 
         &:before {
@@ -57,8 +63,8 @@ a {
             left: 1px;            
             width: calc(100% - 2px);
             height: calc(100% - 2px);
-            border: 2px solid #060042;
-            border-radius: 12px;
+            border: 2px solid $dkPurpleBlue;
+            border-radius: 22px;
         }
 
         span {
@@ -93,7 +99,7 @@ h2 {
         padding: 5px 10px;
         margin-right: 10px;
         background-color: #ffffff;
-        color: #060042;
+        color: $dkPurpleBlue;
         border: none;
         border-radius: 5px;
 

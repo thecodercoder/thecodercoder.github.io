@@ -36,12 +36,17 @@ a {
   margin: 0 auto 15px auto;
   padding: 15px 20px;
   font-size: 0.95rem;
+  background-color: #060042;
   color: #ffffff;
   border: 2px solid #ffffff;
-  border-radius: 13px;
+  border-radius: 26px;
   text-decoration: none;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 a.featured {
@@ -59,7 +64,7 @@ a.featured:before {
   width: calc(100% - 2px);
   height: calc(100% - 2px);
   border: 2px solid #060042;
-  border-radius: 12px;
+  border-radius: 22px;
 }
 
 a.featured span {

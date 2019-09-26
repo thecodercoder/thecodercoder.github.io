@@ -1,0 +1,116 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+body.responsive h1 {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 700px) {
+  body.responsive h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  body.responsive h1 {
+    font-size: 4.75rem;
+  }
+}
+
+body.responsive h2 {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 700px) {
+  body.responsive h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  body.responsive h2 {
+    font-size: 2.5rem;
+  }
+}
+
+body.responsive p {
+  font-size: 1rem;
+}
+
+@media (min-width: 700px) {
+  body.responsive p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  body.responsive p {
+    font-size: 1.25rem;
+  }
+}
+
+body.fluid h1 {
+  font-size: calc(1.5rem + 3vw);
+}
+
+body.fluid h2 {
+  font-size: calc(1.25rem + 1.3vw);
+}
+
+body.fluid p {
+  font-size: calc(0.95rem + 0.25vw);
+}
+
+body.fluid-locks h1 {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 320px) {
+  body.fluid-locks h1 {
+    font-size: calc( 2.25rem + ((4.75 - 2.25) * ((100vw - 20rem) / (90 - 20))));
+  }
+}
+
+@media (min-width: 1440px) {
+  body.fluid-locks h1 {
+    font-size: 4.75rem;
+  }
+}
+
+body.fluid-locks h2 {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 320px) {
+  body.fluid-locks h2 {
+    font-size: calc( 1.5rem + ((2.5 - 1.5) * ((100vw - 20rem) / (90 - 20))));
+  }
+}
+
+@media (min-width: 1440px) {
+  body.fluid-locks h2 {
+    font-size: 2.5rem;
+  }
+}
+
+body.fluid-locks p {
+  font-size: 1rem;
+}
+
+@media (min-width: 320px) {
+  body.fluid-locks p {
+    font-size: calc( 1rem + ((1.25 - 1) * ((100vw - 20rem) / (90 - 20))));
+  }
+}
+
+@media (min-width: 1440px) {
+  body.fluid-locks p {
+    font-size: 1.25rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

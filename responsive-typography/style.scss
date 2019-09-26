@@ -1,0 +1,103 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+body.responsive {
+      
+    h1 { // ~36px - ~76px
+        font-size: 2.25rem;
+        
+        @media (min-width: 700px){
+            font-size: 3.5rem;
+        }
+
+        @media (min-width: 1000px){
+            font-size: 4.75rem;
+        }
+    }
+  
+    h2 { // ~24px - ~40px
+        font-size: 1.5rem;
+        
+        @media (min-width: 700px){
+            font-size: 2rem;
+        }
+
+        @media (min-width: 1000px){
+            font-size: 2.5rem;
+        }  
+    }
+  
+    p { // ~16px - ~20px
+        font-size: 1rem;
+
+        @media (min-width: 700px){
+            font-size: 1.25rem;
+        }
+
+        @media (min-width: 1000px){
+            font-size: 1.25rem;
+        }
+    }
+}
+
+body.fluid {
+
+    h1 { // ~36px - ~76px
+        font-size: calc(1.5rem + 3vw);
+    }
+
+    h2 { // ~24px - ~40px
+        font-size: calc(1.25rem + 1.3vw);
+    }
+
+    p { // ~16px - ~20px
+        font-size: calc(0.95rem + 0.25vw);
+    }
+}
+
+body.fluid-locks { 
+    // calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+    // Using a minimum viewport of 320px or 20rem, and maximum viewport of 1440px or 90rem
+    
+    h1 { // ~36px - ~76px
+        font-size: 2.25rem;
+
+        @media (min-width: 320px){
+            //font-size: calc(36px + (76 - 36) * ((100vw - 320px) / (1440 - 320)));
+            font-size: calc( 2.25rem + ((4.75 - 2.25) * ((100vw - 20rem) / (90 - 20))) );
+        }
+
+        @media (min-width: 1440px){
+            font-size: 4.75rem;
+        }
+    }
+
+    h2 { // ~24px - ~40px
+        font-size: 1.5rem;
+
+        @media (min-width: 320px){
+            font-size: calc( 1.5rem + ((2.5 - 1.5) * ((100vw - 20rem) / (90 - 20))) );
+        }
+
+        @media  (min-width: 1440px){
+            font-size: 2.5rem;
+        }
+    }
+
+    p { // ~16px - ~20px                
+        font-size: 1rem;
+
+        @media (min-width: 320px){
+            font-size: calc( 1rem + ((1.25 - 1) * ((100vw - 20rem) / (90 - 20))) );
+        }
+
+        @media  (min-width: 1440px){
+            font-size: 1.25rem;
+        }
+    }
+}

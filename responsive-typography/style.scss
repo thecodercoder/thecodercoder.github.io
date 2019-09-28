@@ -1,5 +1,5 @@
 html {
-    font-size: 16px;
+    font-size: 100%;
 }
 
 body {
@@ -8,7 +8,7 @@ body {
 
 body.responsive {
       
-    h1 { // ~36px - ~76px
+    h1 {
         font-size: 2.25rem;
         
         @media (min-width: 700px){
@@ -20,7 +20,7 @@ body.responsive {
         }
     }
   
-    h2 { // ~24px - ~40px
+    h2 {
         font-size: 1.5rem;
         
         @media (min-width: 700px){
@@ -32,7 +32,7 @@ body.responsive {
         }  
     }
   
-    p { // ~16px - ~20px
+    p {
         font-size: 1rem;
 
         @media (min-width: 700px){
@@ -47,29 +47,45 @@ body.responsive {
 
 body.fluid {
 
-    h1 { // ~36px - ~76px
-        font-size: calc(1.5rem + 3vw);
+    h1 {
+        font-size: calc(1.3rem + 3.6vw);                
     }
 
-    h2 { // ~24px - ~40px
+    h1.limit {
+        font-size: 2.25rem;
+
+        @media (min-width: 414px){
+            font-size: calc(1.3rem + 3.6vw);
+        }
+
+        @media (min-width: 1440px){
+            font-size: 4.75rem;
+        }
+        
+    }
+
+    h2 {
         font-size: calc(1.25rem + 1.3vw);
     }
 
-    p { // ~16px - ~20px
+    p {
         font-size: calc(0.95rem + 0.25vw);
     }
 }
 
+@mixin calc-font-size($min-vw, $max-vw, $min-font-size, $max-font-size){
+    font-size: calc(#{$min-font-size}rem + ((100vw - #{$min-vw}rem) / (#{$max-vw} - #{$min-vw})) * (#{$max-font-size} - #{$min-font-size}));
+}
+
 body.fluid-locks { 
-    // calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
-    // Using a minimum viewport of 320px or 20rem, and maximum viewport of 1440px or 90rem
+    // Using a minimum viewport of 414px or 25.875rem, and maximum viewport of 1440px or 90rem
     
-    h1 { // ~36px - ~76px
+    h1 {
         font-size: 2.25rem;
 
-        @media (min-width: 320px){
-            //font-size: calc(36px + (76 - 36) * ((100vw - 320px) / (1440 - 320)));
-            font-size: calc( 2.25rem + ((4.75 - 2.25) * ((100vw - 20rem) / (90 - 20))) );
+        @media (min-width: 414px){            
+            font-size: calc(2.25rem + (((100vw - 20rem) / (90 - 20))) * (4.75 - 2.25));
+            @include calc-font-size(25.875, 90, 2.25, 4.75);
         }
 
         @media (min-width: 1440px){

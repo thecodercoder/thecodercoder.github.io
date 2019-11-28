@@ -6,6 +6,7 @@ const group1 = [
     '#programminglanguage',
     '#stackoverflow',
     '#uxuidesign',
+    '#uidesign',
     '#webprogramming',
     '#htmlcss',
     '#vscode'
@@ -53,6 +54,9 @@ const group3 = [
     '#mysql',
     '#worldcode',
     '#techgeek',
+    '#desksetup',
+    '#backend',
+    '#prototyping'
 ]
 
 // 500k-1m
@@ -60,7 +64,9 @@ const group3 = [
 const group4 = [
     '#softwaredeveloper',
     '#computerscience',
-    '#uxdesign',   
+    '#uxdesign',
+    '#webdesigner',
+
 ]
 
 // 1m-2m
@@ -87,6 +93,10 @@ const group6 = [
     '#code',
     '#coding',
     '#programming',
+    '#ilovemyjob',
+    '#software',
+    '#contentcreator',
+
 ]
 
 // Setup pics -- <100k
@@ -104,6 +114,10 @@ const setupSmall = [
     '#techlovers',    
     '#freelancerlife',
     '#remoteworker',
+    '#pcbuild',
+    '#thedreamsetup',
+    '#workingremotely',
+    '#remotelife'
 ]
 
 // Setup pics -- 100k+
@@ -115,6 +129,14 @@ const setupBig = [
     '#instatech',
     '#desktop',
     '#workstation',
+    '#homeoffice',
+    '#workspace',
+    '#desk',
+    '#technology',
+    '#ux',
+    '#ui',
+    '#workfromwherever',
+    '#techlife'
 ]
 
 // Women in Tech
@@ -134,6 +156,11 @@ const infoPost = [
     '#adobexd',
     '#uiux',
     '#uxui',
+    '#userinterface',
+    '#interface',
+    '#educateyourself',
+    '#selftaught',
+    '#onlinelearning',
 ]
 
 // Fisher-Yates Shuffle
@@ -185,18 +212,20 @@ function getHashtags(array, x){
 function getAllHashtags(){
     let hashtags = '';
 
+    // Computer Setup shot
     if (document.getElementById('chkSetup').checked){
         hashtags = hashtags + getHashtags(group1, 1);
-        hashtags = hashtags + '&nbsp;' + getHashtags(group2, 3);
-        hashtags = hashtags + '&nbsp;' + getHashtags(group3, 5);
+        hashtags = hashtags + '&nbsp;' + getHashtags(group2, 2);
+        hashtags = hashtags + '&nbsp;' + getHashtags(group3, 3);
         hashtags = hashtags + '&nbsp;' + getHashtags(group4, 1);
-        hashtags = hashtags + '&nbsp;' + getHashtags(group5, 5);
+        hashtags = hashtags + '&nbsp;' + getHashtags(group5, 3);
         hashtags = hashtags + '&nbsp;' + getHashtags(group6, 3);
         hashtags = hashtags + '&nbsp;' + getHashtags(wit, 1);
 
-        hashtags = hashtags + '&nbsp;' + getHashtags(setupSmall, 3);
-        hashtags = hashtags + '&nbsp;' + getHashtags(setupBig, 4);
+        hashtags = hashtags + '&nbsp;' + getHashtags(setupSmall, 5);
+        hashtags = hashtags + '&nbsp;' + getHashtags(setupBig, 10);
     }
+    // No computer
     else {
         hashtags = hashtags + getHashtags(group1, 1);
         hashtags = hashtags + '&nbsp;' + getHashtags(group2, 3);
@@ -208,7 +237,7 @@ function getAllHashtags(){
     }
 
     if (document.getElementById('chkInfo').checked){
-        hashtags = hashtags + '&nbsp;' + getHashtags(infoPost, 2);
+        hashtags = hashtags + '&nbsp;' + getHashtags(infoPost, 4);
     }
     
     document.getElementById('result').innerHTML = hashtags;

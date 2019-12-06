@@ -12,6 +12,10 @@ body {
   font-family: 'Roboto', Arial, sans-serif;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
 #result {
   word-wrap: break-word;
 }
@@ -30,6 +34,20 @@ body {
   }
 }
 
+fieldset {
+  border: none;
+  margin-bottom: 0.25rem;
+}
+
+fieldset:last-of-type {
+  margin-bottom: 2rem;
+}
+
+label {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
 button {
   border: none;
   outline: none;
@@ -42,6 +60,16 @@ button {
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+textarea {
+  font-size: 1rem;
+}
+
+#count {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */

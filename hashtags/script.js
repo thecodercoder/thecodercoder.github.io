@@ -232,7 +232,7 @@ function getAllHashtags(){
 
     // Computer Setup shot
     if (document.getElementById('chkSetup').checked){
-        hashtags = hashtags + getHashtags(group1, 1);
+        hashtags = getHashtags(group1, 1);
         hashtags = hashtags + '&nbsp;' + getHashtags(group2, 1);
         hashtags = hashtags + '&nbsp;' + getHashtags(group3, 3);
         hashtags = hashtags + '&nbsp;' + getHashtags(group4, 1);
@@ -247,9 +247,9 @@ function getAllHashtags(){
 
     // Setup + person
     if (document.getElementById('chkPerson').checked){
-        hashtags = hashtags + '&nbsp;' + getHashtags(person, 3);
+        hashtags = getHashtags(person, 3);
         
-        hashtags = hashtags + getHashtags(group1, 1);
+        hashtags = hashtags + '&nbsp;' + getHashtags(group1, 1);
         hashtags = hashtags + '&nbsp;' + getHashtags(group2, 1);
         hashtags = hashtags + '&nbsp;' + getHashtags(group3, 3);
         hashtags = hashtags + '&nbsp;' + getHashtags(group4, 1);
@@ -264,9 +264,9 @@ function getAllHashtags(){
 
     // Info gallery
     if (document.getElementById('chkInfo').checked){
-        hashtags = hashtags + '&nbsp;' + getHashtags(infoPost, 7);
+        hashtags = getHashtags(infoPost, 7);
         
-        hashtags = hashtags + getHashtags(group1, 1);
+        hashtags = hashtags + '&nbsp;' + getHashtags(group1, 1);
         hashtags = hashtags + '&nbsp;' + getHashtags(group2, 1);
         hashtags = hashtags + '&nbsp;' + getHashtags(group3, 4);
         hashtags = hashtags + '&nbsp;' + getHashtags(group4, 2);

@@ -49,6 +49,7 @@ const group3 = [
     '#developerlife',
     '#devlife',
     '#coder',
+    '#coders',
     '#codingisfun',
     '#nodejs',
     '#mysql',
@@ -56,7 +57,9 @@ const group3 = [
     '#techgeek',
     '#desksetup',
     '#backend',
-    '#prototyping'
+    '#prototyping',
+    '#programmerlife',
+    '#webdevelopers'
 ]
 
 // 500k-1m
@@ -66,6 +69,7 @@ const group4 = [
     '#computerscience',
     '#uxdesign',
     '#webdesigner',
+    '#dev'
 
 ]
 
@@ -93,50 +97,50 @@ const group6 = [
     '#code',
     '#coding',
     '#programming',
-    '#ilovemyjob',
     '#software',
     '#contentcreator',
+    '#webdesign',
+    '#development',
+    '#web',
 
 ]
 
 // Setup pics -- <100k
-// Get 3
 const setupSmall = [
-    '#deskinspiration',
-    '#cleansetups',
-    '#setupinspiration',
-    '#minimalsetups',
-    '#officeinspiration',
-    '#desksituation',
-    '#designyourworkspace',
-    '#workspaceinspo',
-    '#workdesk',
-    '#techlovers',    
-    '#freelancerlife',
-    '#remoteworker',
-    '#pcbuild',
-    '#thedreamsetup',
-    '#workingremotely',
-    '#remotelife'
+    '#deskinspiration', // 37k
+    '#cleansetups', // 25k
+    '#minimalsetups', // 94k
+    '#officeinspiration', // 97k
+    '#desksituation', // 51k
+    '#designyourworkspace', // 55k
+    '#workspaceinspo', // 60k
+    '#workdesk', // 91k
+    '#techlovers', // 28k  
+    '#thedreamsetup', // 3k
+]
+
+const setupMed = [
+    '#pcbuild', // 350k
+    '#workspacegoals', // 120k
+    '#workfromwherever', // 115k
+    '#setupinspiration', // 100k
+    '#deskgoals', // 170k
+    '#techlife', // 338k
+    '#desktop', // 580k
+    '#workstation', // 670k
 ]
 
 // Setup pics -- 100k+
 // Get 4
 const setupBig = [
-    '#gearporn',
-    '#deskgoals',
-    '#workspacegoals',
-    '#instatech',
-    '#desktop',
-    '#workstation',
-    '#homeoffice',
-    '#workspace',
-    '#desk',
-    '#technology',
-    '#ux',
-    '#ui',
-    '#workfromwherever',
-    '#techlife'
+    '#gearporn', // 900k
+    '#instatech', // 1.3m
+    '#homeoffice', // 2m
+    '#workspace', // 2m
+    '#desk', // 1.7m
+    '#technology', // 12m
+    '#ux', // 1.7m
+    '#ui', // 2.1m
 ]
 
 // Women in Tech
@@ -161,7 +165,21 @@ const infoPost = [
     '#educateyourself',
     '#selftaught',
     '#onlinelearning',
+    '#ux', // 1.7m
+    '#ui', // 2.1m
 ]
+
+// Person in shot
+const person = [
+    '#peoplewithlaptops',
+    '#workingremotely',
+    '#freelancerlife',
+    '#remoteworker',
+    '#remotelife',
+    '#workingfromhome',
+    '#workfromhomelife',
+    '#ilovemyjob',
+];
 
 // Fisher-Yates Shuffle
 // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
@@ -215,32 +233,51 @@ function getAllHashtags(){
     // Computer Setup shot
     if (document.getElementById('chkSetup').checked){
         hashtags = hashtags + getHashtags(group1, 1);
-        hashtags = hashtags + '&nbsp;' + getHashtags(group2, 2);
+        hashtags = hashtags + '&nbsp;' + getHashtags(group2, 1);
+        hashtags = hashtags + '&nbsp;' + getHashtags(group3, 3);
+        hashtags = hashtags + '&nbsp;' + getHashtags(group4, 1);
+        hashtags = hashtags + '&nbsp;' + getHashtags(group5, 4);
+        hashtags = hashtags + '&nbsp;' + getHashtags(group6, 5);
+        hashtags = hashtags + '&nbsp;' + getHashtags(wit, 1);
+
+        hashtags = hashtags + '&nbsp;' + getHashtags(setupSmall, 1);
+        hashtags = hashtags + '&nbsp;' + getHashtags(setupMed, 5);
+        hashtags = hashtags + '&nbsp;' + getHashtags(setupBig, 5);
+    }
+
+    // Setup + person
+    if (document.getElementById('chkPerson').checked){
+        hashtags = hashtags + '&nbsp;' + getHashtags(person, 3);
+        
+        hashtags = hashtags + getHashtags(group1, 1);
+        hashtags = hashtags + '&nbsp;' + getHashtags(group2, 1);
         hashtags = hashtags + '&nbsp;' + getHashtags(group3, 3);
         hashtags = hashtags + '&nbsp;' + getHashtags(group4, 1);
         hashtags = hashtags + '&nbsp;' + getHashtags(group5, 3);
-        hashtags = hashtags + '&nbsp;' + getHashtags(group6, 3);
+        hashtags = hashtags + '&nbsp;' + getHashtags(group6, 4);
         hashtags = hashtags + '&nbsp;' + getHashtags(wit, 1);
 
-        hashtags = hashtags + '&nbsp;' + getHashtags(setupSmall, 5);
-        hashtags = hashtags + '&nbsp;' + getHashtags(setupBig, 10);
+        hashtags = hashtags + '&nbsp;' + getHashtags(setupSmall, 1);
+        hashtags = hashtags + '&nbsp;' + getHashtags(setupMed, 5);
+        hashtags = hashtags + '&nbsp;' + getHashtags(setupBig, 5);
     }
-    // No computer
-    else {
+
+    // Info gallery
+    if (document.getElementById('chkInfo').checked){
+        hashtags = hashtags + '&nbsp;' + getHashtags(infoPost, 7);
+        
         hashtags = hashtags + getHashtags(group1, 1);
-        hashtags = hashtags + '&nbsp;' + getHashtags(group2, 3);
-        hashtags = hashtags + '&nbsp;' + getHashtags(group3, 8);
+        hashtags = hashtags + '&nbsp;' + getHashtags(group2, 1);
+        hashtags = hashtags + '&nbsp;' + getHashtags(group3, 4);
         hashtags = hashtags + '&nbsp;' + getHashtags(group4, 2);
         hashtags = hashtags + '&nbsp;' + getHashtags(group5, 6);
-        hashtags = hashtags + '&nbsp;' + getHashtags(group6, 3);
-        hashtags = hashtags + '&nbsp;' + getHashtags(wit, 1);
-    }
-
-    if (document.getElementById('chkInfo').checked){
-        hashtags = hashtags + '&nbsp;' + getHashtags(infoPost, 4);
+        hashtags = hashtags + '&nbsp;' + getHashtags(group6, 6);
     }
     
     document.getElementById('result').innerHTML = hashtags;
 
     document.getElementById('count').innerHTML = "Hashtag Count: " + hashtags.trim().split(/\&nbsp;+/).length;
 }
+
+document.getElementById('chkSetup').click();
+getAllHashtags();
